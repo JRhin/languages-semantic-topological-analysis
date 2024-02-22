@@ -82,7 +82,7 @@ In the `README.md` to summurize only one of the analysed cases is reported: all 
   <img src="./img/talk.politics.guns_persistence_diagram.png" width="250" />
 </p>
 
-> Peristence Diagram plot. Left the alt.atheism language, center the soc.religion.christian and right the talk.politics.guns one.
+> Peristence Diagram plot. To the left the alt.atheism language, to the center the soc.religion.christian and to the right the talk.politics.guns one.
 
 |Language|Amplitude|Number of points|Persistence Entropy|
 |:--|--:|--:|--:|
