@@ -91,12 +91,25 @@ S(w_i) = \frac{1}{|D_i|}\sum_{d\in D_i} S(d_j)\\
 \end{gather}
 $$
 
+By plotting the signal over the graph defined by the Mapper Algorithm we can notice that the signal seems to be captured by the topology of the semantic space:
+
+<p float="left">
+  <img src="./img/alt.atheism_toxicity.png" width="250" />
+  <img src="./img/soc.religion.christian_toxicity.png" width="250" /> 
+  <img src="./img/talk.politics.guns_toxicity.png" width="250" />
+</p>
+
+> Graphs of the semantic spaces colored by the toxicity signal. At the left the atheism language, center the christian's one and at the right the talks about guns.
+
+This result is more evident by performing a spectral analysis of the graph signals in which we can notice a frequency profile mainly determined by low frequencies.
+
 <p float="left">
   <img src="./img/alt.atheism_frequency_spectrum.svg" width="250" />
   <img src="./img/soc.religion.christian_frequency_spectrum.svg" width="250" /> 
   <img src="./img/talk.politics.guns_frequency_spectrum.svg" width="250" />
 </p>
 
+> Spectral analysis of the toxicity graph signal.
 
 ## Directory Structure
 
