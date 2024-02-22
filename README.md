@@ -92,9 +92,9 @@ S(w_i) = \frac{1}{|D_i|}\sum_{d\in D_i} S(d_j)\\
 $$
 
 <p float="left">
-  <img src="./img/alt.atheism_frequency_spectrum.svg" width="100" />
-  <img src="./img/soc.religion.christian_frequency_spectrum.svg" width="100" /> 
-  <img src="./img/talk.politics.guns_frequency_spectrum.svg" width="100" />
+  <img src="./img/alt.atheism_frequency_spectrum.svg" width="300" />
+  <img src="./img/soc.religion.christian_frequency_spectrum.svg" width="300" /> 
+  <img src="./img/talk.politics.guns_frequency_spectrum.svg" width="300" />
 </p>
 
 
