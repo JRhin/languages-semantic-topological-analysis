@@ -83,6 +83,7 @@ In this section we analyse the persistent homology of each semantic space by fit
 In this study, our objective is to evaluate whether the graph topologies of different languages capture some of the structural aspects of the toxicity signal.
 
 Each document is scored from 0 to 100 by the Google [Perspective API](https://perspectiveapi.com/), which calculates how much a document is toxic. Then the score is propragated to every single words $w_i$ as:
+
 $$
 \begin{gather}
 S(w_i) = \frac{1}{|D_i|}\sum_{d\in D_i} S(d_j)\\
