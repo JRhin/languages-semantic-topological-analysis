@@ -5,7 +5,9 @@ The idea behind this project is to analyse the differences between the semantic 
 To analyse the differences between spaces we perform an in depth topological analysis of the space structure, in particular:
 
 - Persistence Analysis of simplicial complex built from the words embeddings.
-- Graph Analysis of the graph resulting from the Mapper Algorithm. 
+- Graph Analysis of the graph resulting from the Mapper Algorithm.
+
+Here the [link](https://colab.research.google.com/drive/1eDZJtMW1Cxyo2_lA2ANUmV1Pqj9n3oLj?usp=sharing) to the colab version of the notebook.
 
 ## Dataset
 
@@ -70,6 +72,23 @@ The models encodes the tokens in vectors of size 100 that are then processed wit
 
 In this section we analyse the persistent homology of each semantic space by fitting a Vietoris-Rips filtration on the embeddings of each language.
 
+#### All languages
+
+In the `README.md` to summurize only one of the analysed cases is reported: all three languages with their respective complete vocabulary.
+
+<p float="left">
+  <img src="./img/alt.atheism_persistence_diagram.png" width="250" />
+  <img src="./img/soc.religion.christian_persistence_diagram.png" width="250" /> 
+  <img src="./img/talk.politics.guns_perisitence_diagram.png" width="250" />
+</p>
+
+> Peristence Diagram plot. Left the alt.atheism language, center the soc.religion.christian and right the talk.politics.guns one.
+
+|Language|Amplitude|Number of points|Persistence Entropy|
+|:--|--:|--:|--:|
+|alt.atheism|[331.717386, 20.162048, 2.212684]|[304,105,16]|[8.124719, 6.531923, 3.907907]|
+|soc.religion.christian|[609.690555, 58.375561, 8.743782]|[545, 265, 63]|[9.000434, 7.84721, 5.899193]|
+|talk.politics.guns|[526.548118, 50.078922, 8.950492]|[459, 225, 53]|[8.760197, 7.597635, 5.60411]|
 
 
 ### Mapper Algorithm and Signal Analysis
