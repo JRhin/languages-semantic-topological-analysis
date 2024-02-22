@@ -1,4 +1,4 @@
-# Topological Analysis of Languages Semantic Spaces
+# Topological Analysis of Language Semantic Spaces
 
 The idea behind this project is to analyse the differences between the semantic spaces of languages, where the semantic space is captured by the latent space of an encoding model.
 
@@ -90,6 +90,9 @@ In the `README.md` to summurize only one of the analysed cases is reported: all 
 |soc.religion.christian|[609.690555, 58.375561, 8.743782]|[545, 265, 63]|[9.000434, 7.84721, 5.899193]|
 |talk.politics.guns|[526.548118, 50.078922, 8.950492]|[459, 225, 53]|[8.760197, 7.597635, 5.60411]|
 
+From the above results (and the others shown in the notebooks) we can assess:
+- The 'christian' language appears to be topologically similar to the 'guns' language but different from the 'atheism' language.
+- The 'atheism' language seems to be smaller but, more importantly, more cohesive (there is less presence of gaps for each dimension) compared to the other languages.
 
 ### Mapper Algorithm and Signal Analysis
 
