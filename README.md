@@ -54,7 +54,48 @@ So the analysis consider only tokens that appear at least 10 times in the overal
 |soc.religion.christian|546|
 |talk.politics.guns|460|
 
-Each languages has its own istance of the model, which is trained on the respective bag-of-words documents.
+Each language has its own istance of the model, which is trained on the respective bag-of-words documents.
+
+The models encodes the tokens in vectors of size 100 that are then processed with a Robust PCA which keeps only the 5 most informative components of the embeddings.
+
+|Languages|Number of tokens|Embeddings dimension|
+|:--|--:|--:|
+|alt.atheism|305|5|
+|soc.religion.christian|546|5|
+|talk.politics.guns|460|5|
+
+## Topological Data Analysis (TDA)
+
+### Persistent Homology with Vietoris-Rips Complexes
+
+In this section we analyse the persistent homology of each semantic space by fitting a Vietoris-Rips filtration on the embeddings of each language.
+
+
+
+### Mapper Algorithm and Signal Analysis
+
+#### Toxicity Signal
+
+![toxicity signal](./img/words_toxicity_score.svg)
+
+> The boxplot of the word/entity toxicity score for each language.
+
+In this study, our objective is to evaluate whether the graph topologies of different languages capture some of the structural aspects of the toxicity signal.
+
+Each document is scored from 0 to 100 by the Google [Perspective API](https://perspectiveapi.com/), which calculates how much a document is toxic. Then the score is propragated to every single words $w_i$ as:
+$$
+\begin{gather}
+S(w_i) = \frac{1}{|D_i|}\sum_{d\in D_i} S(d_j)\\
+\text{where }D_i\text{ is the set of documents in which }w_i\text{ appears.}
+\end{gather}
+$$
+
+<p float="left">
+  <img src="/alt.atheism_frequency_spectrum.svg" width="100" />
+  <img src="/soc.religion.christian_frequency_spectrum.svg" width="100" /> 
+  <img src="/talk.politics.guns_frequency_spectrum.svg" width="100" />
+</p>
+
 
 ## Directory Structure
 
