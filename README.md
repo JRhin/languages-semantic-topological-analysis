@@ -79,7 +79,7 @@ In the `README.md` to summurize only one of the analysed cases is reported: all 
 <p float="left">
   <img src="./img/alt.atheism_persistence_diagram.png" width="250" />
   <img src="./img/soc.religion.christian_persistence_diagram.png" width="250" /> 
-  <img src="./img/talk.politics.guns_perisitence_diagram.png" width="250" />
+  <img src="./img/talk.politics.guns_persistence_diagram.png" width="250" />
 </p>
 
 > Peristence Diagram plot. Left the alt.atheism language, center the soc.religion.christian and right the talk.politics.guns one.
