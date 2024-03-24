@@ -113,7 +113,7 @@ S(w_i) = \frac{1}{|D_i|}\sum_{d\in D_i} S(d)\\
 \end{gather}
 $$
 
-By plotting the signal over the graph defined by the Mapper Algorithm we can notice that the signal seems to be captured by the topology of the semantic space:
+By plotting the signal over the graph defined by the Mapper Algorithm we can notice that it seems to be captured by the topology of the semantic space:
 
 <p float="left">
   <img src="./img/alt.atheism_toxicity.png" width="250" />
