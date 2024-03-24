@@ -108,7 +108,7 @@ Each document is scored from 0 to 100 by the Google [Perspective API](https://pe
 
 $$
 \begin{gather}
-S(w_i) = \frac{1}{|D_i|}\sum_{d\in D_i} S(d_j)\\
+S(w_i) = \frac{1}{|D_i|}\sum_{d\in D_i} S(d)\\
 \text{where }D_i\text{ is the set of documents in which }w_i\text{ appears.}
 \end{gather}
 $$
