@@ -1,3 +1,5 @@
+<div align="center">
+
 # Topological Analysis of Language Semantic Spaces
 
 The idea behind this project is to analyse the differences between the semantic spaces of languages, where the semantic space is captured by the latent space of an encoding model.
@@ -7,7 +9,7 @@ To analyse the differences between spaces we perform an in depth topological ana
 - Persistence Analysis of simplicial complex built from the words embeddings.
 - Graph Analysis of the graph resulting from the Mapper Algorithm.
 
-Here the [link](https://colab.research.google.com/drive/1eDZJtMW1Cxyo2_lA2ANUmV1Pqj9n3oLj?usp=sharing) to the colab version of the notebook.
+[![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FZm0MuFNjk7VHZ332eF6xKYytbuIXjC-?usp=sharing)
 
 ## Dataset
 
@@ -86,9 +88,9 @@ In the `README.md` to summurize only one of the analysed cases is reported: all 
 
 |Language|Amplitude|Number of points|Persistence Entropy|
 |:--|--:|--:|--:|
-|alt.atheism|[331.717386, 20.162048, 2.212684]|[304,105,16]|[8.124719, 6.531923, 3.907907]|
-|soc.religion.christian|[609.690555, 58.375561, 8.743782]|[545, 265, 63]|[9.000434, 7.84721, 5.899193]|
-|talk.politics.guns|[526.548118, 50.078922, 8.950492]|[459, 225, 53]|[8.760197, 7.597635, 5.60411]|
+|alt.atheism|[321.963775, 25.284133, 3.604191]|   [290, 120, 21] |[8.079624, 6.679756, 4.318987]|
+|soc.religion.christian| [594.221897, 60.268605, 10.546292] |   [530, 255, 67] |[8.970789, 7.80292, 5.97405]|
+|talk.politics.guns| [511.121085, 51.901615, 10.241335] |[441, 224, 59]|[8.708129, 7.619802, 5.76943]|
 
 From the above results (and the others shown in the notebooks) we can assess:
 - The 'christian' language appears to be topologically similar to the 'guns' language but different from the 'atheism' language.
@@ -126,12 +128,52 @@ By plotting the signal over the graph defined by the Mapper Algorithm we can not
 This result is more evident by performing a spectral analysis of the graph signals in which we can notice a frequency profile mainly determined by low frequencies.
 
 <p float="left">
+  <img src="./img/alt.atheism_frequency_spectrum_baseline.svg" width="250" />
+  <img src="./img/soc.religion.christian_frequency_spectrum_baseline.svg" width="250" /> 
+  <img src="./img/talk.politics.guns_frequency_spectrum_baseline.svg" width="250" />
+</p>
+
+> Spectral analysis of the toxicity signal over the graph built from the projection of the inverted index on the words dimension.
+
+<p float="left">
   <img src="./img/alt.atheism_frequency_spectrum.svg" width="250" />
   <img src="./img/soc.religion.christian_frequency_spectrum.svg" width="250" /> 
   <img src="./img/talk.politics.guns_frequency_spectrum.svg" width="250" />
 </p>
 
-> Spectral analysis of the toxicity graph signal.
+
+> Spectral analysis of the toxicity signal over the Mapper Algorithm graph.
+
+<p float="left">
+  <img src="./img/alt.atheism_frequency_spectrum_all_graph.svg" width="250" />
+  <img src="./img/soc.religion.christian_frequency_spectrum_all_graph.svg" width="250" /> 
+  <img src="./img/talk.politics.guns_frequency_spectrum_all_graph.svg" width="250" />
+</p>
+> Spectral analysis over the toxicity graph signal over the Mapper Algorithm disaggregated.
+
+## Relative Semantic Representation 
+
+In this section we're going to analyse the differences between these languages by mapping their semantic space in a common relative representation.
+
+The relative representation is built upon the comparison of word and anchor embeddings, where anchors are chosen words that are expected to convey the same semantic meaning across languages.
+
+We chose to employ commonly shared adjectives across these three languages as anchors for the relative semantic representation.
+
+**Why adjectives?**: Summarizing, adjectives play a pivotal role in defining the quality and semantic of nouns by providing detailed descriptions of their attributes. They introduce properties that nouns alone cannot express, allowing for finer gradations of meaning. Semantically, adjectives denote qualities or properties, while syntactically, they modify nouns, enhancing the expressiveness of language. This combination of semantic and syntactic roles enables adjectives to specify the characteristics of nouns, making language more informative and precise. Adjectives are essential for distinguishing between different entities based on their qualities, contributing significantly to the richness and nuance of language. [[1](https://semantics.uchicago.edu/kennedy/docs/routledge.pdf), [2](https://web.ics.purdue.edu/~vraskin/adjective.pdf) [3](https://academicmarker.com/grammar-practice/words/word-types/adjectives/what-are-adjectives-and-how-do-they-function/)]
+
+<p float="left">
+  <img src="./img/alt.atheism_relative_representation_anchors_good_bad.svg" width="250" />
+  <img src="./img/soc.religion.christian_relative_representation_anchors_good_bad.svg" width="250" /> 
+  <img src="./img/talk.politics.guns_relative_representation_anchors_good_bad.svg" width="250" />
+</p>
+
+> The relative representation using as axis two of the anchors ('good' and 'bad').
+
+Now we can plot the density distribution of the pairwise $l_2$-distance of the relative semantic representation of the same token for each couple of languages:
+
+![Density of the pairwise relative semantic token distances](img/distances_density.svg)
+
+The plot above illustrates that the language 'alt.atheism' exhibits distinct semantics compared to the other two languages, whereas 'soc.religion.christian' and 'talk.politics.guns' appear to have more closely aligned semantics.
 
 ## Directory Structure
 
