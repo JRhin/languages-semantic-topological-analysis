@@ -1,5 +1,3 @@
-<div align="center">
-
 # Topological Analysis of Language Semantic Spaces
 
 The idea behind this project is to analyse the differences between the semantic spaces of languages, where the semantic space is captured by the latent space of an encoding model.
