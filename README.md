@@ -139,7 +139,6 @@ This result is more evident by performing a spectral analysis of the graph signa
   <img src="./img/talk.politics.guns_frequency_spectrum.svg" width="250" />
 </p>
 
-
 > Spectral analysis of the toxicity signal over the Mapper Algorithm graph.
 
 <p float="left">
@@ -147,6 +146,7 @@ This result is more evident by performing a spectral analysis of the graph signa
   <img src="./img/soc.religion.christian_frequency_spectrum_all_graph.svg" width="250" /> 
   <img src="./img/talk.politics.guns_frequency_spectrum_all_graph.svg" width="250" />
 </p>
+
 > Spectral analysis over the toxicity graph signal over the Mapper Algorithm disaggregated.
 
 ## Relative Semantic Representation 
